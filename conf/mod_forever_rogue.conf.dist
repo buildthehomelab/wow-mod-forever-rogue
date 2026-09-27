@@ -1,0 +1,26 @@
+[worldserver]
+
+########################################
+# mod-forever-rogue
+#
+# Rogue combo points follow the rogue from target to target, as in WoW Forever. No client patch.
+########################################
+
+#
+#    ForeverRogue.ComboPoints.Enable
+#        Description: Master switch. With 0, combo points work as in stock 3.3.5: they stay on
+#                     one target and are lost when you attack another or the target dies.
+#        Default:     1
+#
+
+ForeverRogue.ComboPoints.Enable = 1
+
+#
+#    ForeverRogue.ComboPoints.KeepAfterKill
+#        Description: How long, in milliseconds, combo points left on a target that died wait
+#                     for your next target. 0 loses them when the target dies (switching
+#                     between living targets still carries them).
+#        Default:     20000
+#
+
+ForeverRogue.ComboPoints.KeepAfterKill = 20000

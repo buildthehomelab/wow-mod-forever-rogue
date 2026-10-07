@@ -29,6 +29,12 @@ These still lose your combo points, as in stock:
 
 Only rogues get this. Druids in Cat Form keep stock combo points.
 
+## Requirements
+
+- [AzerothCore](https://github.com/azerothcore/azerothcore-wotlk) `master` (WotLK 3.3.5a)
+- A WoW 3.3.5a (12340) client
+- No client patch and no SQL
+
 ## Install
 
 Clone it into your AzerothCore `modules` folder **as `mod-forever-rogue`**, without the repo's
@@ -72,3 +78,22 @@ for finisher casts, so a killing Eviscerate doesn't leave points behind.
   points are already there, because the core checks combo points before any module sees the cast.
   Builders don't have this problem.
 - Playerbots rogues get it too, since they're players.
+
+## Troubleshooting
+
+- **A finisher says "That ability requires combo points" right after a target change.** The points
+  move on the next server update, a few dozen milliseconds later. Press the finisher again.
+- **A finisher on a mouseover or focus target doesn't work.** The core checks combo points before
+  the module sees the cast, so the points must already be on that target. Builders aren't affected.
+- **Combo points are lost.** Using a finisher (even one that kills), dying, a duel ending with the
+  points on your opponent, and Premeditation's points running out all clear them, as in stock.
+
+## Credits
+
+Author: [buildthehomelab](https://github.com/buildthehomelab)
+
+The design follows the WoW Forever private server ruleset. The code is original.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
